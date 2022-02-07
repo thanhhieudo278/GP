@@ -4,7 +4,9 @@ import Tabs from "./navigation/Tabs";
 import MyStack from "./navigation/MyStack";
 
 
+
 const App =()=>{
+ 
   return(
     
     <NavigationContainer>

@@ -55,7 +55,53 @@ function HomeScreen({navigation}) {
           flex: 30,
           backgroundColor: 'yellow',
           width: '100%',
+          flexDirection:'row',
         }}>
+          <TouchableOpacity
+            onPress={( )=> navigation.navigate("SigninScreen")}  
+            style={{
+              backgroundColor: '#6666FF',
+              borderRadius: 20,
+              height: 50,
+              marginHorizontal: 20,
+              marginVertical: 20,
+              justifycontent: 'center',
+              alignItems: 'center',
+              width: 150,
+            }}>
+            <Text
+              style={{
+                color: 'white',
+                fontSize: 23,
+                marginVertical: 7,
+              }}>
+              SigninScreen
+            </Text>
+            
+              
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={( )=> navigation.navigate("SignupScreen")}
+            style={{
+              backgroundColor: '#ef7171',
+              borderRadius: 20,
+              height: 50,
+              marginHorizontal: 35,
+              marginVertical: 20,
+              justifycontent: 'center',
+              alignItems: 'center',
+              width: 150,
+            }}>
+            <Text
+              style={{
+                color: 'white',
+                fontSize: 23,
+                marginVertical: 7,
+              }}>
+              SignupScreen
+            </Text>
+          </TouchableOpacity>
+          
         <Text></Text>
       </View>
       <View
@@ -112,6 +158,7 @@ function HomeScreen({navigation}) {
               P.Trainer
             </Text>
           </TouchableOpacity>
+          
         </View>
       </View>
     </View>

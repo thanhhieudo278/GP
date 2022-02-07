@@ -6,9 +6,10 @@ import{
     ImageBackground,
     TouchableOpacity
 } from 'react-native';
-import { Size } from 'react-native-ui-lib/generatedTypes/src/components/skeletonView';
+
+
 //component = function
-function WellcomeScreen(props)
+function WellcomeScreen({navigation})
 {
     return <View style=
     {{
@@ -33,7 +34,9 @@ function WellcomeScreen(props)
             flex: 1,
             
         }}>
-            <TouchableOpacity style={{
+            <TouchableOpacity 
+            onPress={( )=> navigation.navigate("SigninScreen")}  
+            style={{
                 
                 backgroundColor: '#6666FF',
                 borderRadius:20,

@@ -24,6 +24,7 @@ import LookingScreen from '../screens/LookingScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 
 
+
 import {
   MyStackHome,
   MyStackDiscorver,  
@@ -38,7 +39,7 @@ const CustomTabBarButton = ({children, onPress}) => (
     style={{
       top:-2,
       justifyContent:'center',
-      alignItems: 'center',
+      alignItems:'center',
 
     }}
     onPress={onPress}
@@ -77,7 +78,6 @@ const Tabs = () => {
         tabBarHideOnKeyboard: 'true',
         tabBarStyle: { 
             flexDirection: 'row',
-            
             position: 'absolute',
             width: '85%',
             height: 60,
@@ -111,9 +111,14 @@ const Tabs = () => {
                     fontSize:12,
                     fontWeight:'500',
                   }}>Home</Text>
-              </View>    
-          ),
-        }}/>
+              </View>
+            ),
+          }}
+          
+        
+        
+        
+        />
        
         <Tab.Screen name="Discover" component={MyStackDiscorver} options={{
             tabBarIcon: ({focused}) =>(
@@ -212,8 +217,6 @@ const Tabs = () => {
           ),
         }}/>
     </Tab.Navigator>
-
-    
   );
 }
 

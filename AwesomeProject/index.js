@@ -19,11 +19,17 @@ import CoreTraining from './screens/CoreTraining'
 import LookingScreen from './screens/LookingScreen'
 import ProfileScreen from './screens/ProfileScreen'
 import InsightScreen from './screens/InsightScreen'
+import ChatScreen from './screens/ChatScreen'
+import InsightBodyScreen from './screens/InsightBodyScreen'
+import SummaryBodyScreen from './screens/SummaryBodyScreen'
+import WorkoutBodyScreen from './screens/WorkoutBodyScreen'
+import AboutFoodScreen from './screens/AboutFoodScreen'
+import NutriInsightScreen from './screens/NutriInsightScreen'
 
 
-AppRegistry.registerComponent(appName,() => App);
+// AppRegistry.registerComponent(appName,() => App);
 
-// AppRegistry.registerComponent(appName,() => InsightScreen);
+AppRegistry.registerComponent(appName,() => NutriInsightScreen);
 
 
 

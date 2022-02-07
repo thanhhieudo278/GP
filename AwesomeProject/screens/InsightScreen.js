@@ -85,10 +85,9 @@ function InsightScreen({navigation}) {
                   fontSize: 15,
                   marginLeft: 30,
                 }}>
-                fits your needs.
+                fits your needss.
               </Text>
             </View>
-
             <View style={{flex: 1}} />
             <Image
               source={require('../assets/ic_pt.png')}
