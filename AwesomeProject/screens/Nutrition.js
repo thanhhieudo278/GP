@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   TextInput,
   StyleSheet,
+  ScrollView,
   
 } from 'react-native';
 import {Size} from 'react-native-ui-lib/generatedTypes/src/components/skeletonView';
@@ -100,13 +101,14 @@ function Nutrition({navigation}) {
           borderTopLeftRadius:70,
           backgroundColor: '#F0F8FF',
           flexDirection: 'column',
-          padding:20,
-          paddingTop: 50,
+          
+          paddingTop: 30,
         }}>
             
             <View
                 style={{
-                    flexDirection:'row'
+                    flexDirection:'row',
+                    paddingLeft:20,
                 }}>
 
 
@@ -154,6 +156,7 @@ function Nutrition({navigation}) {
                 </TouchableOpacity>
 
                  <TouchableOpacity
+                    onPress={( )=> navigation.navigate("NutriInsightScreen")}
                     style={{
                         width:100,
                         height: 40,                       
@@ -176,11 +179,12 @@ function Nutrition({navigation}) {
     
 
 
-
+                               
         {/* tao 1 tab recipe-end*/}                    
-
+        <ScrollView>                         
             <View
                 style={{
+                    marginLeft:20,
                     width: 350,
                     height: 150,
                     borderRadius:20,
@@ -196,7 +200,7 @@ function Nutrition({navigation}) {
                     shadowOpacity: 0.25,
                     shadowRadius: 3.84,
 
-                elevation: 20,
+                elevation: 5,
                     
                 }}>
                         <View style={{
@@ -276,6 +280,7 @@ function Nutrition({navigation}) {
 
         <View
                 style={{
+                    marginLeft:20,
                     width: 350,
                     height: 150,
                     borderRadius:20,
@@ -291,7 +296,7 @@ function Nutrition({navigation}) {
                     shadowOpacity: 0.25,
                     shadowRadius: 3.84,
 
-                elevation: 20,
+                elevation: 5,
                     
                 }}>
                         <View style={{
@@ -369,6 +374,7 @@ function Nutrition({navigation}) {
 
         <View
                 style={{
+                    marginLeft:20,
                     width: 350,
                     height: 150,
                     borderRadius:20,
@@ -384,7 +390,7 @@ function Nutrition({navigation}) {
                     shadowOpacity: 0.25,
                     shadowRadius: 3.84,
 
-                elevation: 20,
+                elevation: 5,
                     
                 }}>
                         <View style={{
@@ -455,7 +461,7 @@ function Nutrition({navigation}) {
             </View>
             
         {/* tao 1 tab recipe-end*/}
-
+        </ScrollView>                            
         
 
 

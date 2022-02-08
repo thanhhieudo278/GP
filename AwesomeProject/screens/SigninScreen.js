@@ -39,7 +39,7 @@ function SigninScreen({navigation})
                             return;
                         }
                         const user = firestoreDocument.data()
-                        navigation.navigate("HomeScreen",  /*{user: user}*/)
+                        navigation.navigate("Tabs",  /*{user: user}*/)
                     })
                     .catch(error => {
                         alert(error)

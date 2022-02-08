@@ -30,12 +30,11 @@ function WellcomeScreen({navigation})
             />
         </View>
         <View style={{
-            
             flex: 1,
             
         }}>
             <TouchableOpacity 
-            onPress={( )=> navigation.navigate("SigninScreen")}  
+            onPress={( )=> navigation.navigate("PickRoleScreen")}  
             style={{
                 
                 backgroundColor: '#6666FF',

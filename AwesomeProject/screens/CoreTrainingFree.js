@@ -12,7 +12,7 @@ import {Size} from 'react-native-ui-lib/generatedTypes/src/components/skeletonVi
 import {render} from 'react-native/Libraries/Renderer/implementations/ReactNativeRenderer-prod';
 
 //component = function
-function CoreTraining({navigation}) {
+function CoreTrainingFree({navigation}) {
   return (
     <View
       style={{
@@ -468,4 +468,4 @@ function CoreTraining({navigation}) {
   );
 }
 
-export default CoreTraining;
+export default CoreTrainingFree;

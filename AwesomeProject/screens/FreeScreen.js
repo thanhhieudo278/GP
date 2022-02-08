@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 //component = function
-function HomeScreen({navigation}) {
+function FreeScreen({navigation}) {
   return (
     <View
       style={{
@@ -58,7 +58,6 @@ function HomeScreen({navigation}) {
         />
         
       </View>
-      
       <View
         style={{
           flex: 50,
@@ -68,9 +67,8 @@ function HomeScreen({navigation}) {
           style={{
             flexDirection: 'row',
           }}>
-
           <TouchableOpacity
-            onPress={( )=> navigation.navigate("SelectWorkout")}  
+            onPress={() => navigation.navigate('SelectWorkoutFree')}
             style={{
               backgroundColor: '#6666FF',
               borderRadius: 20,
@@ -89,11 +87,9 @@ function HomeScreen({navigation}) {
               }}>
               Workouts
             </Text>
-            
-              
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={( )=> navigation.navigate("PersonalTrainer")}
+            onPress={() => navigation.navigate('SigninScreen')}
             style={{
               backgroundColor: '#ef7171',
               borderRadius: 20,
@@ -110,14 +106,13 @@ function HomeScreen({navigation}) {
                 fontSize: 23,
                 marginVertical: 7,
               }}>
-              P.Trainer
+              Sign in
             </Text>
           </TouchableOpacity>
-          
         </View>
       </View>
     </View>
   );
 }
 
-export default HomeScreen;
+export default FreeScreen;

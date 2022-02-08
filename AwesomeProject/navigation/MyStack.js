@@ -22,6 +22,30 @@ import Nutrition from '../screens/Nutrition';
 import SigninScreen from '../screens/SigninScreen';
 import SignupScreen from '../screens/SignupScreen';
 import WellcomeScreen from '../screens/WellcomeScreen';
+import InsightBodyScreen from '../screens/InsightBodyScreen';
+import NutriInsightScreen from '../screens/NutriInsightScreen';
+import AboutFoodScreen from '../screens/AboutFoodScreen';
+import WorkoutBodyScreen from '../screens/WorkoutBodyScreen';
+import SummaryBodyScreen from '../screens/SummaryBodyScreen';
+import ChatScreen from '../screens/ChatScreen';
+import PickRoleScreen from '../screens/PickRoleScreen';
+import FreeScreen from '../screens/FreeScreen';
+import SelectWorkoutFree from '../screens/SelectWorkoutFree';
+
+import CoreTrainingFree from '../screens/CoreTrainingFree';
+
+import ManagerHome from '../screens/ManagerHome';
+
+import PTHome from '../screens/PTHome';
+
+
+
+
+
+
+
+import Tabs from './Tabs';
+
 
 
 
@@ -33,14 +57,6 @@ const MyStackHome = () => {
     return (
         <Stack.Navigator 
             screenOptions={{headerShown: false}}>
-                <Stack.Screen
-                    name="WellcomeScreen" 
-                    component={WellcomeScreen}
-                    />
-                <Stack.Screen
-                    name="SigninScreen" 
-                    component={SigninScreen}
-                    />
                 <Stack.Screen 
                     name="HomeScreen" 
                     component={HomeScreen} />
@@ -54,10 +70,6 @@ const MyStackHome = () => {
                     name="PersonalTrainer" 
                     component={PersonalTrainer} />
                 
-                <Stack.Screen 
-                    name="SignupScreen" 
-                    component={SignupScreen}
-                    />
         </Stack.Navigator>     
     );
 };
@@ -84,6 +96,90 @@ const MyStackDiscorver = () => {
   );
 };
 
+const MyStackInsight = () => {
+    return (
+        <Stack.Navigator 
+          screenOptions={{headerShown: false}}>
+            <Stack.Screen 
+                name="InsightBodyScreen" 
+                component={InsightBodyScreen} />
+            <Stack.Screen 
+                name="NutriInsightScreen" 
+                component={NutriInsightScreen} /> 
+            <Stack.Screen 
+                name="AboutFoodScreen" 
+                component={AboutFoodScreen} />   
+            <Stack.Screen 
+                name="WorkoutBodyScreen" 
+                component={WorkoutBodyScreen} />
+            <Stack.Screen 
+                name="SummaryBodyScreen" 
+                component={SummaryBodyScreen} />    
+        </Stack.Navigator>     
+    );
+  };
 
 
-export {MyStackHome, MyStackDiscorver};
+const MyStack = () => {
+  return (
+        <Stack.Navigator 
+            screenOptions={{headerShown: false}}>
+            <Stack.Screen
+                    name="WellcomeScreen" 
+                    component={WellcomeScreen}
+                    />
+            <Stack.Screen
+                    name="PickRoleScreen" 
+                    component={PickRoleScreen}
+                    />
+
+            <Stack.Screen
+                    name="FreeScreen" 
+                    component={FreeScreen}
+                    />
+            <Stack.Screen 
+                    name="SelectWorkoutFree" 
+                    component={SelectWorkoutFree} /> 
+
+                <Stack.Screen 
+                    name="CoreTrainingFree" 
+                    component={CoreTrainingFree} />
+
+            <Stack.Screen
+                    name="SigninScreen" 
+                    component={SigninScreen}
+                    />
+            <Stack.Screen 
+                    name="SignupScreen" 
+                    component={SignupScreen}
+                    />
+            <Stack.Screen 
+                    name="ChatScreen" 
+                    component={ChatScreen} 
+                    />          
+            <Stack.Screen 
+                    name="Tabs" 
+                    component={Tabs} 
+                    />                       
+            
+            <Stack.Screen
+                    name="ManagerHome"
+                    component={ManagerHome}
+                    />
+
+            <Stack.Screen
+                    name="PTHome"
+                    component={PTHome}
+                    />        
+                                    
+        </Stack.Navigator>     
+  );
+};
+
+
+
+
+
+export {MyStackHome, MyStackDiscorver, MyStackInsight};
+
+export default MyStack;

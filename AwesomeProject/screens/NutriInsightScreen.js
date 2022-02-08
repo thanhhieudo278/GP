@@ -18,7 +18,7 @@ import {
 } from 'react-native-chart-kit';
 import {UIButton} from '../components/index';
 //component = function
-function NutriInsightScreen(props) {
+function NutriInsightScreen({navigation}) {
   return (
     <View
       style={{
@@ -196,12 +196,22 @@ function NutriInsightScreen(props) {
           </Text>
         </TouchableOpacity>
       </View>
-      <View
+      {/* -------------------------------------------------------- */}
+      <TouchableOpacity
+        onPress={( )=> navigation.navigate("AboutFoodScreen")}
         style={{
           flex: 25,
           backgroundColor: 'white',
           borderRadius: 20,
           margin: 10,
+          shadowColor: "#000",
+                shadowOffset: {
+                    width: 0,
+                    height: 2,
+                },
+                shadowOpacity: 0.25,
+                shadowRadius: 3.84,
+                elevation: 20,
         }}>
         <View
           style={{
@@ -273,13 +283,23 @@ function NutriInsightScreen(props) {
             </Text>
           </View>
         </View>
-      </View>
-      <View
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        onPress={( )=> navigation.navigate("AboutFoodScreen")}
         style={{
           flex: 25,
           backgroundColor: 'white',
           borderRadius: 20,
           margin: 10,
+          shadowColor: "#000",
+                shadowOffset: {
+                    width: 0,
+                    height: 2,
+                },
+                shadowOpacity: 0.25,
+                shadowRadius: 3.84,
+                elevation: 20,
         }}>
         <View
           style={{
@@ -351,7 +371,11 @@ function NutriInsightScreen(props) {
             </Text>
           </View>
         </View>
-      </View>
+      </TouchableOpacity>
+        {/* -------------------------------------------------------- */}
+
+        
+
     </View>
   );
 }

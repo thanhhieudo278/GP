@@ -9,11 +9,11 @@ import {
 } from 'react-native';
 
 //component = function
-function HomeScreen({navigation}) {
+function ManagerHome({navigation}) {
   return (
     <View
       style={{
-        backgroundColor: '#F0F8FF',
+        backgroundColor: '#ffffff',
         flex: 100,
       }}>
       <View
@@ -29,7 +29,7 @@ function HomeScreen({navigation}) {
             marginLeft: 20,
             fontWeight: 'bold',
           }}>
-          Home
+          Manager home
         </Text>
         <View style={{flex: 1}} />
         <Image
@@ -45,13 +45,12 @@ function HomeScreen({navigation}) {
       <View
         style={{
           flex: 100,
-          width: '100%',
+          alignSelf: 'center'
         }}>
           <Image
-          source={require('../assets/ex_charthome.png')}
+          source={require('../assets/ICgym.jpg')}
           style={{
-            width: "100%",
-            height:"100%",
+            
             
             
           }}
@@ -87,7 +86,7 @@ function HomeScreen({navigation}) {
                 fontSize: 23,
                 marginVertical: 7,
               }}>
-              Workouts
+              User
             </Text>
             
               
@@ -120,4 +119,4 @@ function HomeScreen({navigation}) {
   );
 }
 
-export default HomeScreen;
+export default ManagerHome;

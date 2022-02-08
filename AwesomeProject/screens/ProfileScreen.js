@@ -45,7 +45,6 @@ function ProfileScreen(props) {
       <View
         style={{
           flex: 60,
-          backgroundColor: 'green',
           width: '90%',
           margin:20,
           borderRadius:20,
@@ -59,28 +58,87 @@ function ProfileScreen(props) {
 
                 elevation: 15,
         }}>
-        <Text></Text>
+          <Image
+            source={require('../assets/ex_chartbody.png')}
+              style={{
+                borderRadius:20,
+                width:'100%',
+                height:'100%',
+                  
+              }}
+              >
+          </Image>
       </View>
-      <View
+
+
+      <View 
         style={{
+          flexDirection:'row',
           flex: 50,
-          backgroundColor: 'yellow',
-          width: '90%',
           margin:20,
           marginTop:5,
-          borderRadius:20,
-          shadowColor: "#000",
-          shadowOffset: {
-              width: 0,
-              height: 2,
-          },
-          shadowOpacity: 0.25,
-          shadowRadius: 3.84,
-
-        elevation: 15,
         }}>
-        
-      </View>
+
+        <View
+          style={{
+            flex: 50,
+            width: '90%',
+
+            borderRadius:20,
+            shadowColor: "#000",
+            shadowOffset: {
+                width: 0,
+                height: 2,
+            },
+            shadowOpacity: 0.25,
+            shadowRadius: 3.84,
+
+          elevation: 15,
+          }}>
+            <Image
+                source={require('../assets/ex_heartrate.png')}
+                style={{
+                  borderRadius:20,
+                  width:'100%',
+                  height:'100%',
+                    
+                }}
+              ></Image>
+        </View>
+
+        <View style={{flex:10}}></View> 
+
+        <View
+          style={{
+            flex: 50,
+            backgroundColor: 'yellow',
+            width: '90%',
+            
+            borderRadius:20,
+            shadowColor: "#000",
+            shadowOffset: {
+                width: 0,
+                height: 2,
+            },
+            shadowOpacity: 0.25,
+            shadowRadius: 3.84,
+
+          elevation: 15,
+          }}>
+              <Image
+                source={require('../assets/ex_sleepcycle.png')}
+                style={{
+                  borderRadius:20,
+                  width:'100%',
+                  height:'100%',
+                    
+                }}
+              >
+          </Image> 
+        </View>
+      </View>      
+
+
       <View
         style={{
           flex: 50,
@@ -98,7 +156,7 @@ function ProfileScreen(props) {
               borderRadius: 30,
               height: 50,
               marginHorizontal: 20,
-              marginVertical: 20,
+              marginVertical: 10,
               justifycontent: 'center',
               alignItems: 'center',
               width:'70%',

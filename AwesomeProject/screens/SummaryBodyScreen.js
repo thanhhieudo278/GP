@@ -17,7 +17,7 @@ import {
   StackedBarChart,
 } from 'react-native-chart-kit';
 //component = function
-function SummaryBodyScreen(props) {
+function SummaryBodyScreen({navigation}) {
   return (
     <View
       style={{
@@ -51,6 +51,7 @@ function SummaryBodyScreen(props) {
 
         <View style={{flex: 1}} />
         <Text
+          onPress={( )=> navigation.navigate("WorkoutBodyScreen")}
           style={{
             width: 60,
             height: 30,
@@ -68,6 +69,15 @@ function SummaryBodyScreen(props) {
           backgroundColor: 'white',
           borderRadius: 20,
           margin: 10,
+          shadowColor: "#000",
+                shadowOffset: {
+                    width: 0,
+                    height: 2,
+                },
+                shadowOpacity: 0.25,
+                shadowRadius: 3.84,
+                
+                elevation: 5,
         }}>
         <Text
           style={{
@@ -86,6 +96,15 @@ function SummaryBodyScreen(props) {
           borderRadius: 20,
           margin: 10,
           flexDirection:'row',
+          shadowColor: "#000",
+                shadowOffset: {
+                    width: 0,
+                    height: 2,
+                },
+                shadowOpacity: 0.25,
+                shadowRadius: 3.84,
+                
+                elevation: 5,
         }}>
         <Text
           style={{
@@ -121,6 +140,15 @@ function SummaryBodyScreen(props) {
           borderRadius: 20,
           margin: 10,
           flexDirection:'row',
+          shadowColor: "#000",
+                shadowOffset: {
+                    width: 0,
+                    height: 2,
+                },
+                shadowOpacity: 0.25,
+                shadowRadius: 3.84,
+                
+                elevation: 5,
         }}>
         <Text
           style={{
@@ -156,6 +184,15 @@ function SummaryBodyScreen(props) {
           borderRadius: 20,
           margin: 10,
           flexDirection:'row',
+          shadowColor: "#000",
+                shadowOffset: {
+                    width: 0,
+                    height: 2,
+                },
+                shadowOpacity: 0.25,
+                shadowRadius: 3.84,
+                
+                elevation: 5,
         }}>
         <Text
           style={{

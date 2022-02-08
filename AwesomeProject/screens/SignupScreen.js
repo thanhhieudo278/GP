@@ -252,7 +252,7 @@ function SignupScreen({navigation})
                     marginVertical: 10,
                 
 
-                }}>Login
+                }}>Create
                 </Text>
 
             </TouchableOpacity>

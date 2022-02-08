@@ -17,7 +17,7 @@ import {
   StackedBarChart,
 } from 'react-native-chart-kit';
 //component = function
-function InsightBodyScreen(props) {
+function InsightBodyScreen({navigation}) {
   return (
     <View
       style={{
@@ -51,6 +51,7 @@ function InsightBodyScreen(props) {
 
         <View style={{flex: 1}} />
         <Text
+          onPress={( )=> navigation.navigate("SummaryBodyScreen")}
           style={{
             width: 60,
             height: 30,
@@ -68,6 +69,15 @@ function InsightBodyScreen(props) {
           backgroundColor: 'white',
           borderRadius: 20,
           margin: 10,
+          shadowColor: "#000",
+                shadowOffset: {
+                width: 0,
+                height: 2,
+                },
+                shadowOpacity: 0.25,
+                shadowRadius: 3.84,
+                
+                elevation: 5,
         }}>
         <Text
           style={{
@@ -172,6 +182,15 @@ function InsightBodyScreen(props) {
           backgroundColor: 'white',
           borderRadius: 20,
           margin: 10,
+          shadowColor: "#000",
+                shadowOffset: {
+                width: 0,
+                height: 2,
+                },
+                shadowOpacity: 0.25,
+                shadowRadius: 3.84,
+                
+                elevation: 5,
         }}>
         <Text
           style={{

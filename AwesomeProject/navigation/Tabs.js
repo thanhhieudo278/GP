@@ -22,16 +22,22 @@ import Nutrition from '../screens/Nutrition'
 import HomeScreen from '../screens/HomeScreen'
 import LookingScreen from '../screens/LookingScreen';
 import ProfileScreen from '../screens/ProfileScreen';
+import WellcomeScreen from '../screens/WellcomeScreen';
 
 
 
 import {
   MyStackHome,
-  MyStackDiscorver,  
+  MyStackDiscorver,
+  MyStackInsight,
 } from './MyStack';
 
 
 const Tab = createBottomTabNavigator();
+
+
+
+
 
 
 const CustomTabBarButton = ({children, onPress}) => (
@@ -59,7 +65,7 @@ const CustomTabBarButton = ({children, onPress}) => (
           shadowOpacity: 1.44,
           shadowRadius: 2.5,
 
-          elevation: 3,
+          elevation: 2,
 
         }}>
           {children}
@@ -82,7 +88,7 @@ const Tabs = () => {
             width: '85%',
             height: 60,
             marginHorizontal: 30,
-            marginVertical:50,
+            marginVertical:30,
             borderRadius:40, 
             
         }  
@@ -167,7 +173,7 @@ const Tabs = () => {
           }}
         />
 
-        <Tab.Screen name="Insights" component={LookingScreen} options={{
+        <Tab.Screen name="Insights" component={MyStackInsight} options={{
             tabBarIcon: ({focused}) =>(
               <View style={{
                   alignItems: 'center',
@@ -192,7 +198,8 @@ const Tabs = () => {
               </View>    
           ),
         }} />
-        <Tab.Screen name="Profile" component={ProfileScreen} options={{
+        <Tab.Screen name="Profile" component={ProfileScreen} 
+            options={{
             tabBarIcon: ({focused}) =>(
               <View style={{
                   alignItems: 'center',
@@ -216,9 +223,14 @@ const Tabs = () => {
               </View>    
           ),
         }}/>
+
+        
+
+
     </Tab.Navigator>
   );
 }
+
 
 
 export default Tabs
