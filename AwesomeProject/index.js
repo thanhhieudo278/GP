@@ -29,7 +29,9 @@ import PickRoleScreen from './screens/PickRoleScreen'
 import ManagerHome from './screens/ManagerHome'
 import PersonalTrainer from './screens/PersonalTrainer'
 import ManagerUser from './screens/ManagerUser'
-AppRegistry.registerComponent(appName,() => ManagerUser);
+import ManagerPT from './screens/ManagerPT'
+
+
 AppRegistry.registerComponent(appName,() => App);
 
 

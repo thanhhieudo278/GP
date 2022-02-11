@@ -11,7 +11,7 @@ import {
 import {Size} from 'react-native-ui-lib/generatedTypes/src/components/skeletonView';
 
 //component = function
-function ManagerUser(props) {
+function ManagerPT(props) {
   return (
     <View
       style={{
@@ -33,7 +33,7 @@ function ManagerUser(props) {
               fontWeight: 'bold',
               color:'#111111',
             }}>
-            Premium User
+            P.T
           </Text>
           <Text
             style={{
@@ -59,7 +59,7 @@ function ManagerUser(props) {
             style={{
               width: 30,
               height: 30,
-              marginLeft:120,
+              marginLeft:200,
               marginTop: 15,
               
             }}
@@ -501,4 +501,4 @@ function ManagerUser(props) {
   );
 }
 
-export default ManagerUser;
+export default ManagerPT;

@@ -27,7 +27,8 @@ function ManagerHome({navigation}) {
           style={{
             fontSize: 30,
             marginLeft: 20,
-            fontWeight: 'bold',
+            fontWeight: '500',
+            color:'#181818'
           }}>
           Manager home
         </Text>
@@ -38,7 +39,7 @@ function ManagerHome({navigation}) {
             width: 30,
             height: 30,
             marginEnd: 20,
-            tintColor: 'purple',
+            tintColor: '#181818',
           }}
         />
       </View>
@@ -50,9 +51,6 @@ function ManagerHome({navigation}) {
           <Image
           source={require('../assets/ICgym.jpg')}
           style={{
-            
-            
-            
           }}
         />
         
@@ -69,7 +67,7 @@ function ManagerHome({navigation}) {
           }}>
 
           <TouchableOpacity
-            onPress={( )=> navigation.navigate("SelectWorkout")}  
+            onPress={( )=> navigation.navigate("ManagerUser")}  
             style={{
               backgroundColor: '#6666FF',
               borderRadius: 20,
@@ -92,7 +90,7 @@ function ManagerHome({navigation}) {
               
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={( )=> navigation.navigate("PersonalTrainer")}
+            onPress={( )=> navigation.navigate("ManagerPT")}
             style={{
               backgroundColor: '#ef7171',
               borderRadius: 20,
@@ -109,7 +107,7 @@ function ManagerHome({navigation}) {
                 fontSize: 23,
                 marginVertical: 7,
               }}>
-              P.Trainer
+              P.T
             </Text>
           </TouchableOpacity>
           

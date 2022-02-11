@@ -37,6 +37,9 @@ import CoreTrainingFree from '../screens/CoreTrainingFree';
 import ManagerHome from '../screens/ManagerHome';
 
 import PTHome from '../screens/PTHome';
+import ManagerUser from '../screens/ManagerUser';
+
+import ManagerPT from '../screens/ManagerPT';
 
 
 
@@ -166,6 +169,15 @@ const MyStack = () => {
                     name="ManagerHome"
                     component={ManagerHome}
                     />
+
+            <Stack.Screen
+                    name="ManagerUser"
+                    component={ManagerUser}
+                    />
+            <Stack.Screen
+                    name="ManagerPT"
+                    component={ManagerPT}
+                    />                
 
             <Stack.Screen
                     name="PTHome"
