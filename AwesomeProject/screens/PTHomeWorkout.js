@@ -81,13 +81,15 @@ function PTHomeWorkout({navigation}) {
           borderBottomWidth:0.5,
         }}>
         <Image
-          source={require('../assets/trhieu.jpg')}
+          source={require('../assets/ic_pushup.png')}
           style={{
+            backgroundColor:'#e0dbff',
             width: 70,
             height: 70,
             marginLeft: 10,
             marginTop: 15,
             borderRadius:40,
+            
           }}
         />
         <View>
@@ -99,7 +101,7 @@ function PTHomeWorkout({navigation}) {
               color: 'black',
               fontSize:20,
             }}>
-            Tran Trung Hieu
+            Core Training
             
           </Text>
           <Text
@@ -107,12 +109,12 @@ function PTHomeWorkout({navigation}) {
               marginLeft:12,
               fontSize: 14,
               color: 'gray',
-            }}>Phone: 084 2213 022 
+            }}>Duration: 30min
           </Text>
         </View>
-        <TouchableOpacity>
+        
         <TouchableOpacity
-          onPress={( )=> navigation.navigate("ManagerCrudPT")}
+          // onPress={( )=> navigation.navigate("PTCrudWorkout")}
         >
         <Image
             source={require('../assets/ic_pencil.png')}
@@ -122,11 +124,11 @@ function PTHomeWorkout({navigation}) {
               height:25,
               width:25,
             }}/>
-        </TouchableOpacity>   
-        </TouchableOpacity>                         
+        </TouchableOpacity>                              
       </View>
 {/* -------------------------------------------------------------------------------- */}
-      <View
+     
+<View
         style={{
           width:"90%",
           height:100,
@@ -136,13 +138,15 @@ function PTHomeWorkout({navigation}) {
           borderBottomWidth:0.5,
         }}>
         <Image
-          source={require('../assets/trhieu.jpg')}
+          source={require('../assets/ic_pushup.png')}
           style={{
+            backgroundColor:'#e0dbff',
             width: 70,
             height: 70,
             marginLeft: 10,
             marginTop: 15,
             borderRadius:40,
+            
           }}
         />
         <View>
@@ -154,7 +158,7 @@ function PTHomeWorkout({navigation}) {
               color: 'black',
               fontSize:20,
             }}>
-            Tran Trung Hieu
+            Core Training
             
           </Text>
           <Text
@@ -162,10 +166,13 @@ function PTHomeWorkout({navigation}) {
               marginLeft:12,
               fontSize: 14,
               color: 'gray',
-            }}>Phone: 084 2213 022 
+            }}>Duration: 30min
           </Text>
         </View>
-        <TouchableOpacity>
+        
+        <TouchableOpacity
+          // onPress={( )=> navigation.navigate("PTCrudWorkout")}
+        >
         <Image
             source={require('../assets/ic_pencil.png')}
             style={{
@@ -174,11 +181,10 @@ function PTHomeWorkout({navigation}) {
               height:25,
               width:25,
             }}/>
-        </TouchableOpacity>   
-                      
+        </TouchableOpacity>                              
       </View>
-
-      <View
+{/* -------------------------------------------------------------------------------- */}
+<View
         style={{
           width:"90%",
           height:100,
@@ -188,13 +194,15 @@ function PTHomeWorkout({navigation}) {
           borderBottomWidth:0.5,
         }}>
         <Image
-          source={require('../assets/trhieu.jpg')}
+          source={require('../assets/ic_pushup.png')}
           style={{
+            backgroundColor:'#e0dbff',
             width: 70,
             height: 70,
             marginLeft: 10,
             marginTop: 15,
             borderRadius:40,
+            
           }}
         />
         <View>
@@ -206,7 +214,7 @@ function PTHomeWorkout({navigation}) {
               color: 'black',
               fontSize:20,
             }}>
-            Tran Trung Hieu
+            Core Training
             
           </Text>
           <Text
@@ -214,10 +222,13 @@ function PTHomeWorkout({navigation}) {
               marginLeft:12,
               fontSize: 14,
               color: 'gray',
-            }}>Phone: 084 2213 022 
+            }}>Duration: 30min
           </Text>
         </View>
-        <TouchableOpacity>
+        
+        <TouchableOpacity
+          // onPress={( )=> navigation.navigate("PTCrudWorkout")}
+        >
         <Image
             source={require('../assets/ic_pencil.png')}
             style={{
@@ -226,11 +237,10 @@ function PTHomeWorkout({navigation}) {
               height:25,
               width:25,
             }}/>
-        </TouchableOpacity>   
-                      
+        </TouchableOpacity>                              
       </View>
-
-      <View
+{/* -------------------------------------------------------------------------------- */}
+<View
         style={{
           width:"90%",
           height:100,
@@ -240,13 +250,15 @@ function PTHomeWorkout({navigation}) {
           borderBottomWidth:0.5,
         }}>
         <Image
-          source={require('../assets/trhieu.jpg')}
+          source={require('../assets/ic_pushup.png')}
           style={{
+            backgroundColor:'#e0dbff',
             width: 70,
             height: 70,
             marginLeft: 10,
             marginTop: 15,
             borderRadius:40,
+            
           }}
         />
         <View>
@@ -258,7 +270,7 @@ function PTHomeWorkout({navigation}) {
               color: 'black',
               fontSize:20,
             }}>
-            Tran Trung Hieu
+            Core Training
             
           </Text>
           <Text
@@ -266,10 +278,13 @@ function PTHomeWorkout({navigation}) {
               marginLeft:12,
               fontSize: 14,
               color: 'gray',
-            }}>Phone: 084 2213 022 
+            }}>Duration: 30min
           </Text>
         </View>
-        <TouchableOpacity>
+        
+        <TouchableOpacity
+          // onPress={( )=> navigation.navigate("PTCrudWorkout")}
+        >
         <Image
             source={require('../assets/ic_pencil.png')}
             style={{
@@ -278,11 +293,10 @@ function PTHomeWorkout({navigation}) {
               height:25,
               width:25,
             }}/>
-        </TouchableOpacity>   
-                      
+        </TouchableOpacity>                              
       </View>
-
-      <View
+{/* -------------------------------------------------------------------------------- */}
+<View
         style={{
           width:"90%",
           height:100,
@@ -292,13 +306,15 @@ function PTHomeWorkout({navigation}) {
           borderBottomWidth:0.5,
         }}>
         <Image
-          source={require('../assets/trhieu.jpg')}
+          source={require('../assets/ic_pushup.png')}
           style={{
+            backgroundColor:'#e0dbff',
             width: 70,
             height: 70,
             marginLeft: 10,
             marginTop: 15,
             borderRadius:40,
+            
           }}
         />
         <View>
@@ -310,7 +326,7 @@ function PTHomeWorkout({navigation}) {
               color: 'black',
               fontSize:20,
             }}>
-            Tran Trung Hieu
+            Core Training
             
           </Text>
           <Text
@@ -318,10 +334,13 @@ function PTHomeWorkout({navigation}) {
               marginLeft:12,
               fontSize: 14,
               color: 'gray',
-            }}>Phone: 084 2213 022 
+            }}>Duration: 30min
           </Text>
         </View>
-        <TouchableOpacity>
+        
+        <TouchableOpacity
+          // onPress={( )=> navigation.navigate("PTCrudWorkout")}
+        >
         <Image
             source={require('../assets/ic_pencil.png')}
             style={{
@@ -330,11 +349,10 @@ function PTHomeWorkout({navigation}) {
               height:25,
               width:25,
             }}/>
-        </TouchableOpacity>   
-                      
+        </TouchableOpacity>                              
       </View>
-
-      <View
+{/* -------------------------------------------------------------------------------- */}
+<View
         style={{
           width:"90%",
           height:100,
@@ -344,13 +362,15 @@ function PTHomeWorkout({navigation}) {
           borderBottomWidth:0.5,
         }}>
         <Image
-          source={require('../assets/trhieu.jpg')}
+          source={require('../assets/ic_pushup.png')}
           style={{
+            backgroundColor:'#e0dbff',
             width: 70,
             height: 70,
             marginLeft: 10,
             marginTop: 15,
             borderRadius:40,
+            
           }}
         />
         <View>
@@ -362,7 +382,7 @@ function PTHomeWorkout({navigation}) {
               color: 'black',
               fontSize:20,
             }}>
-            Tran Trung Hieu
+            Core Training
             
           </Text>
           <Text
@@ -370,10 +390,13 @@ function PTHomeWorkout({navigation}) {
               marginLeft:12,
               fontSize: 14,
               color: 'gray',
-            }}>Phone: 084 2213 022 
+            }}>Duration: 30min
           </Text>
         </View>
-        <TouchableOpacity>
+        
+        <TouchableOpacity
+          // onPress={( )=> navigation.navigate("PTCrudWorkout")}
+        >
         <Image
             source={require('../assets/ic_pencil.png')}
             style={{
@@ -382,11 +405,10 @@ function PTHomeWorkout({navigation}) {
               height:25,
               width:25,
             }}/>
-        </TouchableOpacity>   
-                      
+        </TouchableOpacity>                              
       </View>
-
-      <View
+{/* -------------------------------------------------------------------------------- */}
+<View
         style={{
           width:"90%",
           height:100,
@@ -396,13 +418,15 @@ function PTHomeWorkout({navigation}) {
           borderBottomWidth:0.5,
         }}>
         <Image
-          source={require('../assets/trhieu.jpg')}
+          source={require('../assets/ic_pushup.png')}
           style={{
+            backgroundColor:'#e0dbff',
             width: 70,
             height: 70,
             marginLeft: 10,
             marginTop: 15,
             borderRadius:40,
+            
           }}
         />
         <View>
@@ -414,7 +438,7 @@ function PTHomeWorkout({navigation}) {
               color: 'black',
               fontSize:20,
             }}>
-            Tran Trung Hieu
+            Core Training
             
           </Text>
           <Text
@@ -422,10 +446,13 @@ function PTHomeWorkout({navigation}) {
               marginLeft:12,
               fontSize: 14,
               color: 'gray',
-            }}>Phone: 084 2213 022 
+            }}>Duration: 30min
           </Text>
         </View>
-        <TouchableOpacity>
+        
+        <TouchableOpacity
+          // onPress={( )=> navigation.navigate("PTCrudWorkout")}
+        >
         <Image
             source={require('../assets/ic_pencil.png')}
             style={{
@@ -434,62 +461,10 @@ function PTHomeWorkout({navigation}) {
               height:25,
               width:25,
             }}/>
-        </TouchableOpacity>   
-                      
+        </TouchableOpacity>                              
       </View>
-
-      <View
-        style={{
-          width:"90%",
-          height:100,
-          marginLeft:20,
-          backgroundColor: 'white',
-          flexDirection: 'row',
-          borderBottomWidth:0.5,
-        }}>
-        <Image
-          source={require('../assets/trhieu.jpg')}
-          style={{
-            width: 70,
-            height: 70,
-            marginLeft: 10,
-            marginTop: 15,
-            borderRadius:40,
-          }}
-        />
-        <View>
-          <Text
-            style={{
-              marginTop: 20,
-              marginLeft: 10,
-              fontWeight: '500',
-              color: 'black',
-              fontSize:20,
-            }}>
-            Tran Trung Hieu
-            
-          </Text>
-          <Text
-            style={{
-              marginLeft:12,
-              fontSize: 14,
-              color: 'gray',
-            }}>Phone: 084 2213 022 
-          </Text>
-        </View>
-        <TouchableOpacity>
-        <Image
-            source={require('../assets/ic_pencil.png')}
-            style={{
-              marginLeft:80,
-              marginTop:30,
-              height:25,
-              width:25,
-            }}/>
-        </TouchableOpacity>   
-                      
-      </View>
-    
+{/* -------------------------------------------------------------------------------- */}
+     
     
 
     

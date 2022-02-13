@@ -7,13 +7,35 @@ import {
   ImageBackground,
   TouchableOpacity,
 } from 'react-native';
-
+import { getAuth, signOut, onAuthStateChanged } from "firebase/auth";
+import { firebase, auth, db, storage } from '../firebase/config.js'
 //component = function
 function FreeScreen({navigation}) {
+  const getPremium = () => {
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            const uid = user.uid;
+            const usersRef = firebase.firestore().collection('users')
+                usersRef
+                    .doc(uid)
+                    .update({roles: "Subcribe"})
+                    .then(() => {
+                         navigation.navigate("SigninScreen")
+                        alert('get premium successful')
+                    })
+                    .catch((error) => {
+                        alert(error)
+                    });
+          // ...
+        } else {
+          alert('Cannot find user information')
+        }
+      });
+}
   return (
     <View
       style={{
-        backgroundColor: '#F0F8FF',
+        backgroundColor: '#f7fafe',
         flex: 100,
       }}>
       <View
@@ -38,7 +60,7 @@ function FreeScreen({navigation}) {
             width: 30,
             height: 30,
             marginEnd: 20,
-            tintColor: 'purple',
+            tintColor: 'black',
           }}
         />
       </View>
@@ -62,6 +84,7 @@ function FreeScreen({navigation}) {
         style={{
           flex: 50,
           width: '100%',
+          flexDirection:"column",
         }}>
         <View
           style={{
@@ -89,7 +112,8 @@ function FreeScreen({navigation}) {
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => navigation.navigate('SigninScreen')}
+            onPress={getPremium}
+            
             style={{
               backgroundColor: '#ef7171',
               borderRadius: 20,
@@ -106,10 +130,32 @@ function FreeScreen({navigation}) {
                 fontSize: 23,
                 marginVertical: 7,
               }}>
-              Sign in
+              Get premium 
             </Text>
           </TouchableOpacity>
         </View>
+        <TouchableOpacity
+            onPress={() => navigation.navigate('SigninScreen')}
+            style={{
+              backgroundColor: '#ef7171',
+              borderRadius: 20,
+              height: 50,
+              marginHorizontal: 25,
+              marginVertical: 10,
+              justifycontent: 'center',
+              alignItems: 'center',
+              width: 150,
+            }}>
+            <Text
+              style={{
+                color: 'white',
+                fontSize: 23,
+                marginVertical: 7,
+              }}>
+              sign in
+            </Text>
+          </TouchableOpacity>
+
       </View>
     </View>
   );

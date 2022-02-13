@@ -330,7 +330,6 @@ function SelectWorkoutFree({navigation}) {
                     alignItems: 'center',
                     justifyContent: 'center',
                     color: '#6666FF',
-
                 }}> Running
                 
 

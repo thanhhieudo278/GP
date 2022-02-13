@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Text,
   View,
@@ -8,20 +8,58 @@ import {
 } from 'react-native';
 import {Directions, TextInput} from 'react-native-gesture-handler';
 import {Size} from 'react-native-ui-lib/generatedTypes/src/components/skeletonView';
-import { getAuth, signOut } from "firebase/auth";
+import { getAuth, signOut, onAuthStateChanged } from "firebase/auth";
 import { firebase, auth, db, storage } from '../firebase/config.js'
+import { getStorage, ref, getDownloadURL } from "firebase/storage";
 
 //component = function
-function ProfileScreen({navigation}) {
+function ProfileScreen({ navigation }) {
+    const [email, setEmail] = useState('');
+    const [name, setName] = useState('');
+    const [phone, setPhone] = useState('');
+    const [url, setUrl] = useState('');
+    
+    useEffect(() => {
+        onAuthStateChanged(auth, (user) => {
+            const uid = user.uid;
+            const usersRef = firebase.firestore().collection('users')
+            usersRef
+                .doc(uid)
+                .get()
+                .then(firestoreDocument => {
+                    if (!firestoreDocument.exists) {
+                        alert("User does not exist anymore.")
+                        return;
+                    }
+                    else {
+                        setEmail(firestoreDocument.data().email)
+                        setName(firestoreDocument.data().fullName)
+                        setPhone(firestoreDocument.data().phoneNumber)
+                    }
+                })
+        })
 
-  const LogOut = () => {
-    signOut(auth).then(() => {
-        //i dont know how to navigate :>
-        navigation.navigate("SigninScreen")
-    }).catch((error) => {
-        alert(error)
-    });
-}
+        // const imageRef = "usersImage/I${phone}.png";
+        // console.log(imageRef);
+        getDownloadURL(ref(storage, "usersImage/I0989346696.png")).then((url) => {
+            setUrl(url)
+            console.log(url)
+        })
+        .catch((e) => {
+            console.log(e)
+        })
+
+    }, [])
+
+
+    const LogOut = () => {
+        signOut(auth).then(() => {
+            //i dont know how to navigate :>
+            navigation.navigate("SigninScreen")
+        }).catch((error) => {
+            alert(error)
+        });
+    }
   return (
     <View
       style={{
@@ -47,7 +85,7 @@ function ProfileScreen({navigation}) {
                 fontWeight: '500',
                 color: 'black',
               }}>
-              Hello USER
+              Hello, {name}
             </Text>
             <Text
                 style={{
@@ -55,7 +93,7 @@ function ProfileScreen({navigation}) {
                 marginLeft: 20,
                 fontWeight: '500',
               }}>
-                  SDT
+                Phone number: {phone}
             </Text>
           </View>
 

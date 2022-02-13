@@ -55,6 +55,8 @@ import PTHomeWorkout from '../screens/PTHomeWorkout';
 import ProfileScreenUser from '../screens/ProfileScreenUser';
 import ProfileScreen from '../screens/ProfileScreen';
 
+import PTNutriCrud from '../screens/PTNutriCrud';
+
 
 
 
@@ -235,8 +237,13 @@ const MyStack = () => {
                     component={PTHomeWorkout}
                     /> 
 
+            <Stack.Screen
+                    name="PTNutriCrud"
+                    component={PTNutriCrud}
+                    /> 
+
                                                    
-                  
+    
             
         </Stack.Navigator>     
   );
