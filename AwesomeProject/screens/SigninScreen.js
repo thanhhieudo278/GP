@@ -34,12 +34,37 @@ function SigninScreen({navigation})
                     .doc(uid)
                     .get()
                     .then(firestoreDocument => {
+                        //Change from this
                         if (!firestoreDocument.exists) {
                             alert("User does not exist anymore.")
                             return;
                         }
-                        const user = firestoreDocument.data()
-                        navigation.navigate("Tabs",  /*{user: user}*/)
+                        // const user = firestoreDocument.data()
+                        // navigation.navigate("Tabs",  /*{user: user}*/)
+                        switch (firestoreDocument.data().roles) {
+                            case "Unsubcribe":
+                                alert("You are Unsubcriber");
+                                //const user = firestoreDocument.data();
+                                navigation.navigate("FreeScreen",  /*{user: user}*/)
+                                break;
+                            case "Subcribe":
+                                alert("You are Premium");
+                                navigation.navigate("Tabs");
+                                break;
+                            case "PT":
+                                alert("Welcome PT!");
+                                navigation.navigate("PTHome");
+                                break;
+                            case "Manager":
+                                alert("Welcome Manager!");
+                                navigation.navigate("ManagerHome");
+                                break;
+                            default:
+                                alert("You Computer has been hacked!");
+                                break;
+                        }
+                        
+
                     })
                     .catch(error => {
                         alert(error)
@@ -56,15 +81,12 @@ function SigninScreen({navigation})
         flex: 1
         
     }}>
-        <View style={{
-            
-            flex:1
-        }}></View>
+        
 
         <View style={{        
             alignItems: 'center',   
-            marginHorizontal:1,
-            flex : 1,
+            marginTop: 100,
+           
             
         }}>
             <Text style={{
@@ -77,7 +99,7 @@ function SigninScreen({navigation})
 
         <View style={{
             
-            flex:4
+            
         }}>
             <View style={{
                 flexDirection: 'row',
@@ -146,26 +168,23 @@ function SigninScreen({navigation})
 
         <View style={{        
             alignItems:'center',
-            flex : 5,
+            
             
         }}>
-            <TouchableOpacity
-                onPress={( )=> navigation.navigate("SignupScreen")}   
-            >
+            
                 <Text 
+                onPress={( )=> navigation.navigate("SignupScreen")} 
                 style={{
                     color: "black",
                     fontSize: 20,
                     marginTop:250,
                     textDecorationLine: 'underline',
                 }}>Don't have an account? Sign up</Text>
-            </TouchableOpacity>
+            
         </View>
 
         <View style={{
-            
-            flex: 2,
-            
+             
         }}>
             <TouchableOpacity
                 style={{               

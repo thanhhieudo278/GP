@@ -8,45 +8,64 @@ import {
 } from 'react-native';
 import {Directions, TextInput} from 'react-native-gesture-handler';
 import {Size} from 'react-native-ui-lib/generatedTypes/src/components/skeletonView';
+import { getAuth, signOut } from "firebase/auth";
+import { firebase, auth, db, storage } from '../firebase/config.js'
+
 //component = function
-function ProfileScreen(props) {
+function ProfileScreen({navigation}) {
+
+  const LogOut = () => {
+    signOut(auth).then(() => {
+        //i dont know how to navigate :>
+        navigation.navigate("SigninScreen")
+    }).catch((error) => {
+        alert(error)
+    });
+}
   return (
     <View
       style={{
         backgroundColor: '#f7fafe',
         flex: 100,
       }}>
-      <View
+      <TouchableOpacity
+        onPress={( )=> navigation.navigate("ProfileScreenUser")}
         style={{
-          flexDirection: 'column',
-          flex: 15,
+          flexDirection: 'row',
+          height: 100,
+          backgroundColor: "white",
           justifyContent: 'flex-start',
-          marginTop: 25,
+          borderBottomWidth: 0.5,
+          
         }}>
-        <Text
-          style={{
-            fontSize: 25,
-            marginLeft: 20,
-            fontWeight: '500',
-            color: 'black',
-          }}>
-          Hello Tr.Hieu
-        </Text>
-        <Text
-            style={{
-            fontSize: 15,
-            marginLeft: 20,
-            fontWeight: '500',
-          }}>
-              Today 
-        </Text>
-        
-      </View>
+          <View style={{flexDirection: 'column',}}>  
+            <Text
+              style={{
+                marginTop: 25,
+                fontSize: 25,
+                marginLeft: 20,
+                fontWeight: '500',
+                color: 'black',
+              }}>
+              Hello USER
+            </Text>
+            <Text
+                style={{
+                fontSize: 15,
+                marginLeft: 20,
+                fontWeight: '500',
+              }}>
+                  SDT
+            </Text>
+          </View>
+
+      </TouchableOpacity>
       <View
         style={{
           flex: 60,
           width: '90%',
           margin:20,
+          marginTop: 25,
           borderRadius:20,
           shadowColor: "#000",
                     shadowOffset: {
@@ -149,27 +168,43 @@ function ProfileScreen(props) {
             flexDirection: 'row',
             alignContent:'center',
             justifyContent:'center',
+            
           }}>
           <TouchableOpacity
+            onPress={LogOut}
             style={{
-              backgroundColor: '#8883f0',
+              backgroundColor: '#d70606',
               borderRadius: 30,
               height: 50,
               marginHorizontal: 20,
               marginVertical: 10,
-              justifycontent: 'center',
               alignItems: 'center',
-              width:'70%',
+              width:'40%',
+              flexDirection:'row',
             }}>
             <Text
               style={{
                 color: '#f2f2fe',
                 fontSize: 23,
-                marginVertical: 7,
+                marginLeft: 24,
+                marginBottom:5,
               }}>
-             New widget
+             Logout
             </Text>
+
+            
+            <Image
+            source={require('../assets/ic_logout.png')}
+            style={{
+              width: 30,
+              height: 30,
+              tintColor: 'white',
+              marginLeft: 8,
+              marginBottom:4,
+            }}
+            /> 
           </TouchableOpacity>
+
           
         </View>
       </View>

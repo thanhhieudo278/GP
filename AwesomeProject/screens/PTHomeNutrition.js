@@ -11,7 +11,7 @@ import {
 import {Size} from 'react-native-ui-lib/generatedTypes/src/components/skeletonView';
 
 //component = function
-function ManagerUser({navigation}) {
+function PTHomeNutrition({navigation}) {
   return (
     <View
       style={{
@@ -33,7 +33,7 @@ function ManagerUser({navigation}) {
               fontWeight: 'bold',
               color:'#111111',
             }}>
-            Premium User
+            Nutrition
           </Text>
           <Text
             style={{
@@ -59,7 +59,7 @@ function ManagerUser({navigation}) {
             style={{
               width: 30,
               height: 30,
-              marginLeft:120,
+              marginLeft:200,
               marginTop: 15,
               
             }}
@@ -112,7 +112,7 @@ function ManagerUser({navigation}) {
         </View>
         <TouchableOpacity>
         <TouchableOpacity
-          onPress={( )=> navigation.navigate("ManagerCrudUser")}
+          onPress={( )=> navigation.navigate("ManagerCrudPT")}
         >
         <Image
             source={require('../assets/ic_pencil.png')}
@@ -503,4 +503,4 @@ function ManagerUser({navigation}) {
   );
 }
 
-export default ManagerUser;
+export default PTHomeNutrition;

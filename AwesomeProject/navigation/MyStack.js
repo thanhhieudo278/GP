@@ -43,6 +43,20 @@ import ManagerPT from '../screens/ManagerPT';
 
 
 
+import ManagerCrudPT from '../screens/ManagerCrudPT';
+import ManagerCrudUser from '../screens/ManagerCrudUser';
+
+import PTHomeStudent from '../screens/PTHomeStudent';
+
+import PTHomeNutrition from '../screens/PTHomeNutrition';
+
+import PTHomeWorkout from '../screens/PTHomeWorkout';
+
+import ProfileScreenUser from '../screens/ProfileScreenUser';
+import ProfileScreen from '../screens/ProfileScreen';
+
+
+
 
 
 
@@ -122,6 +136,20 @@ const MyStackInsight = () => {
     );
   };
 
+  const MyStackProfile = () => {
+    return (
+        <Stack.Navigator 
+          screenOptions={{headerShown: false}}>
+            <Stack.Screen 
+                name="ProfileScreen" 
+                component={ProfileScreen} />
+            <Stack.Screen 
+                name="ProfileScreenUser" 
+                component={ProfileScreenUser} />    
+        </Stack.Navigator>     
+    );
+  };
+
 
 const MyStack = () => {
   return (
@@ -183,7 +211,33 @@ const MyStack = () => {
                     name="PTHome"
                     component={PTHome}
                     />        
-                                    
+            <Stack.Screen
+                    name="ManagerCrudPT"
+                    component={ManagerCrudPT}
+                    />
+            <Stack.Screen
+                    name="ManagerCrudUser"
+                    component={ManagerCrudUser}
+                    />
+
+            <Stack.Screen
+                    name="PTHomeStudent"
+                    component={PTHomeStudent}
+                    />  
+
+            <Stack.Screen
+                    name="PTHomeNutrition"
+                    component={PTHomeNutrition}
+                    /> 
+
+            <Stack.Screen
+                    name="PTHomeWorkout"
+                    component={PTHomeWorkout}
+                    /> 
+
+                                                   
+                  
+            
         </Stack.Navigator>     
   );
 };
@@ -192,6 +246,6 @@ const MyStack = () => {
 
 
 
-export {MyStackHome, MyStackDiscorver, MyStackInsight};
+export {MyStackHome, MyStackDiscorver, MyStackInsight,MyStackProfile};
 
 export default MyStack;

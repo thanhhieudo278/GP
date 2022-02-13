@@ -18,6 +18,7 @@ function SignupScreen({navigation})
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
+    const [phoneNumber, setPhoneNumber] = useState('')
 
     const onFooterLinkPress = () => {
         navigation.navigate("SigninScreen")
@@ -39,13 +40,16 @@ function SignupScreen({navigation})
                     id: uid,
                     email,
                     fullName,
+                    phoneNumber,
+                    roles: "Unsubcribe",
                 };
+                //When Register done then push data to server and switch to Screen
                 const usersRef = firebase.firestore().collection('users')
                 usersRef
                     .doc(uid)
                     .set(data)
                     .then(() => {
-                        navigation.navigate("HomeScreen", {user: data})
+                        navigation.navigate("SigninScreen", /*{user: data}*/)
                     })
                     .catch((error) => {
                         alert(error)
@@ -64,28 +68,21 @@ function SignupScreen({navigation})
         flex: 1
         
     }}>
-        <View style={{
-            
-            flex:1
-        }}></View>
-
         <View style={{        
-            alignItems: 'center',   
-            marginHorizontal:1,
-            flex : 1,
-            
+            alignItems:'center',   
+            height:100,
         }}>
             <Text style={{
-                
+                marginTop:30,
                 color: "black",
                 fontSize: 35,
 
-            }}> Create your account</Text>
+            }}>Create your account</Text>
         </View>
 
         <View style={{
             
-            flex:4
+            
         }}>
             <View style={{
                 flexDirection: 'row',
@@ -113,7 +110,7 @@ function SignupScreen({navigation})
                     autoCapitalize="none" 
                 />
                    
-                <View style={{flex:1}}/> 
+                
                                     
             </View>
 
@@ -143,11 +140,39 @@ function SignupScreen({navigation})
                     autoCapitalize="none"  
                 />
                    
-                <View style={{flex:1}}/> 
+                
                                     
             </View>
 
-            
+            <View style={{
+                flexDirection: 'row',
+                flexWrap: "wrap",
+                backgroundColor: '#FFFFFF',
+                borderRadius:10,
+                marginHorizontal:20,
+                marginVertical:20,
+                height: 60,
+                alignItems: 'center',
+                borderColor: '#6666FF',
+                borderWidth: 2
+                
+            }}>                                    
+                <TextInput style={{
+                    marginLeft:20,
+                    fontSize:25,
+                    
+                }}
+                    placeholder='Phone Number'
+                    placeholderTextColor="#aaaaaa"
+                    onChangeText={(text) => setPhoneNumber(text)}
+                    value={phoneNumber}
+                    underlineColorAndroid="transparent"
+                    autoCapitalize="none"  
+                />
+                   
+                
+                                    
+            </View>
 
             <View style={{
                 flexDirection: 'row',
@@ -176,7 +201,7 @@ function SignupScreen({navigation})
                     autoCapitalize="none"
                 />
                    
-                <View style={{flex:1}}/> 
+                
                                   
             </View>
            
@@ -207,33 +232,24 @@ function SignupScreen({navigation})
                     autoCapitalize="none"
                 />
                    
-                <View style={{flex:1}}/>       
+                   
             </View>
 
             
         </View>
 
-        <View style={{        
-            alignItems:'center',
-            flex : 2,
-            
-        }}>
-            <TouchableOpacity
-                onPress={( )=> navigation.navigate("SigninScreen")}   
-            >
-                <Text style={{
-                    color: "black",
-                    fontSize: 20,
-                    marginTop:100,
-                    textDecorationLine: 'underline',
-                }}>Have an account? Sign in</Text>
-            </TouchableOpacity>    
-        </View>
+       
+        <Text 
+            onPress={( )=> navigation.navigate("SigninScreen")}  
+            style={{
+                color: "black",
+                fontSize: 20,
+                marginLeft:80,
+                textDecorationLine: 'underline',
+            }}>Have an account? Sign in</Text>
 
-        <View style={{
-            
-            flex: 1,
-            
+        <View style={{      
+           marginBottom: 40,
         }}>
             <TouchableOpacity 
             onPress={() => onRegisterPress()}
@@ -250,8 +266,6 @@ function SignupScreen({navigation})
                     color: 'white',
                     fontSize:23,
                     marginVertical: 10,
-                
-
                 }}>Create
                 </Text>
 

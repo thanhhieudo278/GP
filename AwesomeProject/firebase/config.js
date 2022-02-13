@@ -1,7 +1,29 @@
-// Import the functions you need from the SDKs you need
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
+import { getAnalytics } from "firebase/analytics";
+import {
+    GoogleAuthProvider,
+    getAuth,
+    signInWithPopup,
+    signInWithEmailAndPassword,
+    createUserWithEmailAndPassword,
+    sendPasswordResetEmail,
+    signOut,
+} from "firebase/auth";
+  import {
+    getFirestore,
+    query,
+    getDocs,
+    collection,
+    doc,
+    setDoc,
+    where,
+    addDoc,
+  } from "firebase/firestore";
+  import { getStorage, ref } from "firebase/storage";
+
+
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -22,9 +44,14 @@ let app;
 
 if (firebase.apps.length === 0) {
   app = firebase.initializeApp(firebaseConfig);
-  firebase.firestore().settings({experimentalForceLongPolling: true});
+  firebase.firestore().settings({ experimentalForceLongPolling: true });
 } else {
   app = firebase.app();
 }
 
-export {firebase};
+const storage = getStorage(app);
+const auth = getAuth(app);
+const db = getFirestore(app);
+const analytics = getAnalytics(app);
+
+export { firebase, auth, db, analytics, storage };

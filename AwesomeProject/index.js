@@ -32,6 +32,7 @@ import ManagerUser from './screens/ManagerUser'
 import ManagerPT from './screens/ManagerPT'
 
 
+
 AppRegistry.registerComponent(appName,() => App);
 
 

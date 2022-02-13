@@ -11,7 +11,7 @@ import {
 import {Size} from 'react-native-ui-lib/generatedTypes/src/components/skeletonView';
 
 //component = function
-function ManagerPT(props) {
+function ManagerPT({navigation}) {
   return (
     <View
       style={{
@@ -111,7 +111,9 @@ function ManagerPT(props) {
           </Text>
         </View>
         <TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={( )=> navigation.navigate("ManagerCrudPT")}
+        >
         <Image
             source={require('../assets/ic_pencil.png')}
             style={{

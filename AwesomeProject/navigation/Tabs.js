@@ -26,10 +26,12 @@ import WellcomeScreen from '../screens/WellcomeScreen';
 
 
 
+
 import {
   MyStackHome,
   MyStackDiscorver,
   MyStackInsight,
+  MyStackProfile,
 } from './MyStack';
 
 
@@ -198,7 +200,7 @@ const Tabs = () => {
               </View>    
           ),
         }} />
-        <Tab.Screen name="Profile" component={ProfileScreen} 
+        <Tab.Screen name="Profile" component={MyStackProfile} 
             options={{
             tabBarIcon: ({focused}) =>(
               <View style={{

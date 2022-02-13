@@ -38,7 +38,7 @@ function HomeScreen({navigation}) {
             width: 30,
             height: 30,
             marginEnd: 20,
-            tintColor: 'purple',
+            tintColor: 'black',
           }}
         />
       </View>

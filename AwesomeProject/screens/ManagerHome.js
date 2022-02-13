@@ -8,8 +8,19 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
+import { getAuth, signOut } from "firebase/auth";
+import { firebase, auth, db, storage } from '../firebase/config.js'
+
 //component = function
 function ManagerHome({navigation}) {
+  const LogOut = () => {
+    signOut(auth).then(() => {
+        //i dont know how to navigate :>
+        navigation.navigate("SigninScreen")
+    }).catch((error) => {
+        alert(error)
+    });
+}
   return (
     <View
       style={{
@@ -60,6 +71,7 @@ function ManagerHome({navigation}) {
         style={{
           flex: 50,
           width: '100%',
+          flexDirection:'column',
         }}>
         <View
           style={{
@@ -109,9 +121,43 @@ function ManagerHome({navigation}) {
               }}>
               P.T
             </Text>
-          </TouchableOpacity>
-          
+          </TouchableOpacity>  
         </View>
+        <TouchableOpacity
+            onPress={LogOut}
+            style={{
+              backgroundColor: '#d70606',
+              borderRadius: 30,
+              height: 50,
+              marginHorizontal: 120,
+              marginVertical: 10,
+              alignItems: 'center',
+              width:'40%',
+              flexDirection:'row',
+            }}>
+            <Text
+              style={{
+                color: '#f2f2fe',
+                fontSize: 23,
+                marginLeft: 24,
+                marginBottom:5,
+              }}>
+             Logout
+            </Text>
+
+            
+            <Image
+            source={require('../assets/ic_logout.png')}
+            style={{
+              width: 30,
+              height: 30,
+              tintColor: 'white',
+              marginLeft: 8,
+              marginBottom:4,
+            }}
+            /> 
+          </TouchableOpacity>
+
       </View>
     </View>
   );
