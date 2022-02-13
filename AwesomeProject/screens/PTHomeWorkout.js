@@ -114,7 +114,7 @@ function PTHomeWorkout({navigation}) {
         </View>
         
         <TouchableOpacity
-          // onPress={( )=> navigation.navigate("PTCrudWorkout")}
+          onPress={( )=> navigation.navigate("PTWorkoutCrud")}
         >
         <Image
             source={require('../assets/ic_pencil.png')}
@@ -451,7 +451,7 @@ function PTHomeWorkout({navigation}) {
         </View>
         
         <TouchableOpacity
-          // onPress={( )=> navigation.navigate("PTCrudWorkout")}
+         
         >
         <Image
             source={require('../assets/ic_pencil.png')}
@@ -465,15 +465,29 @@ function PTHomeWorkout({navigation}) {
       </View>
 {/* -------------------------------------------------------------------------------- */}
      
-    
-
-    
-
-    
-
-              
-
-    </ScrollView>        
+    </ScrollView>
+    <TouchableOpacity
+          onPress={( )=> navigation.navigate("PTWorkoutCrud")}
+          style={{
+            backgroundColor: '#4444ff',
+            borderRadius: 20,
+            height: 55,
+            width:150,
+            marginVertical: 30,
+            marginLeft:120,
+            
+            justifycontent: 'center',
+            alignItems: 'center',
+          }}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: 23,
+              marginVertical: 10,
+            }}>
+            Create
+          </Text>
+        </TouchableOpacity>    
     </View>
   );
 }

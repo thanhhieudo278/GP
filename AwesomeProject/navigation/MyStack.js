@@ -46,6 +46,7 @@ import ManagerPT from '../screens/ManagerPT';
 import ManagerCrudPT from '../screens/ManagerCrudPT';
 import ManagerCrudUser from '../screens/ManagerCrudUser';
 
+
 import PTHomeStudent from '../screens/PTHomeStudent';
 
 import PTHomeNutrition from '../screens/PTHomeNutrition';
@@ -57,7 +58,7 @@ import ProfileScreen from '../screens/ProfileScreen';
 
 import PTNutriCrud from '../screens/PTNutriCrud';
 
-
+import PTWorkoutCrud from '../screens/PTWorkoutCrud';
 
 
 
@@ -221,7 +222,7 @@ const MyStack = () => {
                     name="ManagerCrudUser"
                     component={ManagerCrudUser}
                     />
-
+           
             <Stack.Screen
                     name="PTHomeStudent"
                     component={PTHomeStudent}
@@ -242,8 +243,13 @@ const MyStack = () => {
                     component={PTNutriCrud}
                     /> 
 
+            <Stack.Screen
+                    name="PTWorkoutCrud"
+                    component={PTWorkoutCrud}
+                    />         
+
                                                    
-    
+
             
         </Stack.Navigator>     
   );

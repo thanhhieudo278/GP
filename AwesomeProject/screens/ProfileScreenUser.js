@@ -76,11 +76,10 @@ function ProfileScreenUser() {
         <View
             style={{
                 backgroundColor: '#F0F8FF',
-                flex: 100,
+                flex: 1,
             }}>
             <View
                 style={{
-                    flex: 10,
                     justifyContent: 'flex-start',
                     marginTop: 25,
                     flexDirection: 'row',
@@ -100,7 +99,7 @@ function ProfileScreenUser() {
 
             <View
                 style={{
-                    flex: 30,
+                    height:600,
                     backgroundColor: 'white',
                     borderRadius: 20,
                     margin: 10,
@@ -132,14 +131,7 @@ function ProfileScreenUser() {
                             }}>
                             Name: <Text>{name}</Text>
                         </Text>
-                        {/* <Text
-                            style={{
-                                fontSize: 20,
-                                fontWeight: 'bold',
-                                marginTop: 10,
-                            }}>
-                            Age: 18
-                        </Text> */}
+                        
                         <Text
                             style={{
                                 fontSize: 20,
@@ -159,52 +151,7 @@ function ProfileScreenUser() {
                     </View>
                 </View>
             </View>
-            <View
-                style={{
-                    flex: 25,
-                    flexDirection: 'row',
-                }}>
-                <TouchableOpacity
-                    style={{
-                        backgroundColor: '#6666FF',
-                        borderRadius: 20,
-                        height: 55,
-                        width: 100,
-                        marginVertical: 30,
-                        marginHorizontal: 50,
-                        justifycontent: 'center',
-                        alignItems: 'center',
-                    }}>
-                    <Text
-                        style={{
-                            color: 'white',
-                            fontSize: 23,
-                            marginVertical: 10,
-                        }}>
-                        Edit
-                    </Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    style={{
-                        backgroundColor: 'red',
-                        borderRadius: 20,
-                        height: 55,
-                        width: 100,
-                        marginVertical: 30,
-                        marginLeft: 30,
-                        justifycontent: 'center',
-                        alignItems: 'center',
-                    }}>
-                    <Text
-                        style={{
-                            color: 'white',
-                            fontSize: 23,
-                            marginVertical: 10,
-                        }}>
-                        Delete
-                    </Text>
-                </TouchableOpacity>
-            </View>
+            
         </View>
     );
 }

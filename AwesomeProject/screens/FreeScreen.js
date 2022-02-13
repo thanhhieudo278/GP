@@ -18,19 +18,18 @@ function FreeScreen({navigation}) {
             const usersRef = firebase.firestore().collection('users')
                 usersRef
                     .doc(uid)
-                    .update({roles: "Subcribe"})
+                    .update({ roles: "Subcribe" })
                     .then(() => {
-                         navigation.navigate("SigninScreen")
-                        alert('get premium successful')
+                        navigation.navigate("SigninScreen")
                     })
                     .catch((error) => {
                         alert(error)
                     });
           // ...
         } else {
-          alert('Cannot find user information')
+            alert('Cannot find user information')
         }
-      });
+    });
 }
   return (
     <View

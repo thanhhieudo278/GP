@@ -38,7 +38,7 @@ function PTNutriCrud(props) {
               fontWeight: 'bold',
               color: 'black',
             }}>
-            Add Nutrition
+            Nutrition
           </Text>
         </View>
       </View>
@@ -190,9 +190,56 @@ function PTNutriCrud(props) {
             </View>
           </View>
         </View>
-      </ScrollView>
-
+        <View>
+        <View
+        style={{
+          flexDirection:'row',
+        }}>
+        <TouchableOpacity
+          style={{
+            backgroundColor: '#6666FF',
+            borderRadius: 20,
+            height: 55,
+            width: 100,
+            marginVertical: 30,
+            marginHorizontal:50,
+            justifycontent: 'center',
+            alignItems: 'center',
+          }}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: 23,
+              marginVertical: 10,
+            }}>
+            Save
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{
+            backgroundColor: 'red',
+            borderRadius: 20,
+            height: 55,
+            width:100,
+            marginVertical: 30,
+            marginLeft:30,
+            justifycontent: 'center',
+            alignItems: 'center',
+          }}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: 23,
+              marginVertical: 10,
+            }}>
+            Delete
+          </Text>
+        </TouchableOpacity>
+        
+      </View>
       
+        </View>
+        </ScrollView>
     </View>
   );
 }

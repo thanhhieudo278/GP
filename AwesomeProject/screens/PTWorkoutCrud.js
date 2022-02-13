@@ -17,16 +17,15 @@ import {
   StackedBarChart,
 } from 'react-native-chart-kit';
 //component = function
-function ManagerCrudUser({navigation}) {
+function PTWorkoutCrud() {
   return (
     <View
       style={{
         backgroundColor: '#F0F8FF',
-        flex: 100,
+        flex:1,
       }}>
       <View
         style={{
-          flex: 10,
           justifyContent: 'flex-start',
           marginTop: 25,
           flexDirection: 'row',
@@ -36,35 +35,25 @@ function ManagerCrudUser({navigation}) {
             style={{
               fontSize: 30,
               marginLeft: 20,
-              fontWeight: 'bold',
+              fontWeight: '500',
               color: 'black',
             }}>
-            Information
+            Workout
           </Text>
         </View>
       </View>
 
       <View
         style={{
-          height:500,
           backgroundColor: 'white',
           borderRadius: 20,
           margin: 10,
+          marginTop:40,
         }}>
         <View
           style={{
             flexDirection: 'column',
           }}>
-          <Image
-            source={require('../assets/thanhhieu.png')}
-            style={{
-              width: 100,
-              height: 100,
-              marginTop: 20,
-              marginLeft: 130,
-              borderRadius:100,
-            }}
-          />
           <View
             style={{
               marginLeft: 40,
@@ -76,36 +65,114 @@ function ManagerCrudUser({navigation}) {
                 fontWeight: 'bold',
                 marginTop: 10,
               }}>
-              Name: Do Thanh Hieu
+              Name:
             </Text>
+            <TextInput
+              style={{
+                color: 'black',
+              }}
+              placeholder="Name workout"
+              placeholderTextColor={'grey'}
+            />
             <Text
               style={{
                 fontSize: 20,
                 fontWeight: 'bold',
                 marginTop: 10,
               }}>
-              Phone: 098 889 9889
+              Difficulty: 
             </Text>
+            <TextInput
+              style={{
+                color: 'black',
+              }}
+              placeholder="Difficulty"
+              placeholderTextColor={'grey'}
+            />
             <Text
               style={{
                 fontSize: 20,
                 fontWeight: 'bold',
                 marginTop: 10,
               }}>
-              Email: hieuvjppro@gmail.com
+              Duration: 
             </Text>
+            <TextInput
+              style={{
+                color: 'black',
+              }}
+              placeholder="Duration"
+              placeholderTextColor={'grey'}
+            />
+            <Text
+              style={{
+                fontSize: 20,
+                fontWeight: 'bold',
+                marginTop: 10,
+              }}>
+              Program: 
+            </Text>
+            <TextInput
+              style={{
+                color: 'black',
+              }}
+              placeholder="Program"
+              placeholderTextColor={'grey'}
+            />
           </View>
         </View>
       </View>
+
       <View
         style={{
-          flex:25,
           flexDirection:'row',
         }}>
-      
+        <TouchableOpacity
+          style={{
+            backgroundColor: '#6666FF',
+            borderRadius: 20,
+            height: 55,
+            width: 100,
+            marginVertical: 30,
+            marginHorizontal:50,
+            justifycontent: 'center',
+            alignItems: 'center',
+          }}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: 23,
+              marginVertical: 10,
+            }}>
+            Save
+          </Text>
+        </TouchableOpacity>
         <TouchableOpacity
           style={{
             backgroundColor: 'red',
+            borderRadius: 20,
+            height: 55,
+            width:100,
+            marginVertical: 30,
+            marginLeft:30,
+            justifycontent: 'center',
+            alignItems: 'center',
+          }}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: 23,
+              marginVertical: 10,
+            }}>
+            Delete
+          </Text>
+        </TouchableOpacity>
+        
+      </View>
+      <TouchableOpacity
+          
+          style={{
+            backgroundColor: '#4444ff',
             borderRadius: 20,
             height: 55,
             width:150,
@@ -121,12 +188,11 @@ function ManagerCrudUser({navigation}) {
               fontSize: 23,
               marginVertical: 10,
             }}>
-            Delete
+            Create
           </Text>
-        </TouchableOpacity>
-      </View>
+        </TouchableOpacity>    
     </View>
   );
 }
 
-export default ManagerCrudUser;
+export default PTWorkoutCrud;
